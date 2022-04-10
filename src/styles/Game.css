@@ -1,0 +1,17 @@
+.game {
+    text-align: center;
+    min-height: 100vh;
+}
+.game-board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hidden-input-field {
+    background-color: darkgray;
+    border: 0px;
+}
+#hidden-input-field:focus {
+    outline: none;
+    color: transparent;
+}

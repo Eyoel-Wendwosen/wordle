@@ -1,0 +1,6 @@
+.row {
+    background-color: darkgrey;
+    display: flex;
+    flex-direction: row;
+    
+}
