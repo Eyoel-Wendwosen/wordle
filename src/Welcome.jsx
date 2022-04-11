@@ -1,12 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import "./Welcome.css";
+import "./styles/Welcome.css";
+import "./styles/App.css";
+import { useDispatch } from 'react-redux';
 
 
 export default function Welcome() {
+    const dispatch = useDispatch();
+    function setGameDifficulty(wordLength, tries) {
+        dispatch({
+            type: 'SET_DIFFICULTY',
+            wordLength,
+            tries
+        })
+    }
     return (
-        <div>
+        <div className='container'>
             <div id="nav-bar">
                 <Link to={"/"}>Home</Link>
                 <Link to={"/game"}>Game</Link>
@@ -21,14 +31,24 @@ export default function Welcome() {
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nihil cupiditate vitae ratione consequuntur obcaecati quae esse non facere veritatis temporibus adipisci accusantium, inventore illum sequi. Illum pariatur beatae obcaecati.</p>
             </div>
             <div>
-                <Link to={"/game"} >
+                <Link to={"/game/easy"} >
                     <button>
-                        Play New Game
+                        EASY
+                    </button>
+                </Link>
+                <Link to={"/game/medium"} >
+                    <button>
+                        MEDIUM
+                    </button>
+                </Link>
+                <Link to={"/game/hard"} >
+                    <button>
+                        HARD
                     </button>
                 </Link>
                 <Link to={"/rules"} >
                     <button>
-                        Check out Rules
+                        New
                     </button>
                 </Link>
 

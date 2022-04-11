@@ -1,4 +1,4 @@
-.letter-box {
+#letter-box {
     height: 40px;
     width: 40px;
     padding: 3px;
@@ -8,4 +8,15 @@
     justify-content: center;
     font-size: 36px;
     margin: 5px;
+}
+
+.correct-position {
+    background-color: green;
+}
+.correct-letter {
+    background-color: gold;
+}
+
+.incorrect {
+    background-color: rgb(73, 73, 73);
 }

@@ -1,17 +1,37 @@
 .game {
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     min-height: 100vh;
 }
+
 .game-board {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 #hidden-input-field {
-    background-color: darkgray;
+    background-color: white;
     border: 0px;
+    width: 100%;
 }
+
 #hidden-input-field:focus {
     outline: none;
     color: transparent;
+    caret-color:transparent;
+}
+
+#nav-bar {
+    display: flex;
+    padding: 2%;
+    justify-content: right;
+}
+
+#nav-bar a {
+    margin: 0 5%;
+}
+
+#game-header {
+    text-align: center;
 }

@@ -17,7 +17,8 @@ export default function App() {
             <Provider store={store}>
                 <Routes>
                     <Route path={"/"} element={<Welcome />} />
-                    <Route path={"/game"} element={<Game />} />
+                    <Route path={"/game/"} element={<Game />} />
+                    <Route path={"/game/:difficulty"} element={<Game />} />
                     <Route path={"/rules"} element={<Rules />} />
                 </Routes>
             </Provider>

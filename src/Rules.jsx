@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Rules() {
   return (
-    <div>
+    <div className="container">
       <div id="nav-bar">
         <Link to={"/"}>Home</Link>
         <Link to={"/game"}>Game</Link>
