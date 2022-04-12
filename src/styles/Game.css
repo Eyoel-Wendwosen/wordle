@@ -1,7 +1,7 @@
 .game {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    min-height: 100vh;
+    min-height: 96vh;
 }
 
 .game-board {
@@ -11,7 +11,8 @@
 }
 
 #hidden-input-field {
-    background-color: white;
+    background: #fffef0;
+    /* background-color: white; */
     border: 0px;
     width: 100%;
 }
@@ -19,7 +20,7 @@
 #hidden-input-field:focus {
     outline: none;
     color: transparent;
-    caret-color:transparent;
+    caret-color: transparent;
 }
 
 #nav-bar {

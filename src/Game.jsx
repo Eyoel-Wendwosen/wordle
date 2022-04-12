@@ -170,13 +170,18 @@ export default function Game(props) {
         setCurrentAttemptIndex(currentAttemptIndex + 1);
       } else {
         // TODO: is not valid word
-        showNotification("Invalid word", "Word is not valid, please try a new word", "info", 2000, "bottom-center");
+        showNotification("Invalid word", "Word is not valid, please try a new word", "info", 2000, "top-center");
 
       }
     } else if (gameStatus === GAME_STATUS.WIN) {
-      showNotification("Congratulations!", "You have won this game, try another round!", "success");
+      const word = Object.keys(selectedWord)[0];
+      const definition = selectedWord[word];
+      showNotification("Congratulations!", `You have won this game, try another round! The word was ${word}: ${definition}`, "success", 7000);
     } else {
-      showNotification("Opps!", `You have lost this game, try another round!`, "warning");
+
+      const word = Object.keys(selectedWord)[0];
+      const definition = selectedWord[word];
+      showNotification("Opps!", `You have lost this game, try another round! The word was ${word}: ${definition}`, "warning", 7000);
     }
 
   }
@@ -202,37 +207,38 @@ export default function Game(props) {
     setAttempts([""]);
     setCurrentAttemptIndex(0);
     updateGameStatus(GAME_STATUS.STARTED);
-    showNotification("Good Luck", `You have started a new game, try to find the word with ${tries} attempts!`, "info", 3000);
+    showNotification("Good Luck", `You have started a new game, try to find the ${wordLength} letter word with ${tries} attempts!`, "info", 3000);
   }
 
   return (
-    <div className="game ">
-      <ReactNotifications />
-      <div className="container" onClick={setHiddenInputFocus}>
-
+    <div className="game" >
+      <div className="container" >
         <div id="nav-bar">
           <Link to={"/"}>Home</Link>
           <Link to={"/game"}>Game</Link>
           <Link to={"/rules"}>Rules</Link>
         </div>
-        <div id="game-header" >
-          <h1>
-            Guess the word!
-          </h1>
-        </div>
-        <div>
-          Attempts: {tries - currentAttemptIndex}
-        </div>
-        <form onSubmit={(e) => checkUserSubmission(e)}>
-          <input id="hidden-input-field" type="" onKeyUp={(e) => handleKeyPress(e)} />
-        </form>
-        <div className="game-board">
-          <Board />
+        <div onClick={setHiddenInputFocus}>
+          <div id="game-header" >
+            <h1>
+              Guess the word!
+            </h1>
+          </div>
+          <div>
+            Attempts: {tries - currentAttemptIndex}
+          </div>
+          <form onSubmit={(e) => checkUserSubmission(e)}>
+            <input id="hidden-input-field" type="" onKeyUp={(e) => handleKeyPress(e)} />
+          </form>
+          <div className="game-board">
+            <Board />
+          </div>
+
+          <button type="reset" onClick={initializeNewGame}>
+            New Game
+          </button>
         </div>
 
-        <button type="reset" onClick={initializeNewGame}>
-          New Game
-        </button>
       </div>
     </div>
 

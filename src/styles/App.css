@@ -1,8 +1,41 @@
 #nav-bar {
-    height: 10vh;
+    margin: 4% 2%;
+    height: 6%;
 }
+
+#app {
+    width: 75%;
+    margin: 0 auto;
+    height: 94%;
+    position: relative;
+}
+
 .container {
     font-family: 'Courier New', Courier, monospace;
     width: 75%;
     margin: 0 auto;
 }
+
+#mask {
+    position: absolute;
+    display: flex;
+    /* min-height: 88vh; */
+    margin: 2% auto;
+    padding: 4%;
+    width: 75%;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
+    background: #fffef0;
+    filter: url(#wavy2);
+}
+
+/* @media (max-width: 450px) {
+    #svg-filter {
+        visibility: hidden;
+        display: none;
+        
+    }
+
+} */

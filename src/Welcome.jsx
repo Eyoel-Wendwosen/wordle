@@ -24,35 +24,24 @@ export default function Welcome() {
             </div>
             <div id="game-description">
                 <h1>
-                    Welcome to Wordle Game!
+                    WORDLE!
                 </h1>
                 <h3>The rules to play are simple. </h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nihil cupiditate vitae ratione consequuntur obcaecati quae esse non facere veritatis temporibus adipisci accusantium, inventore illum sequi. Illum pariatur beatae obcaecati.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nihil cupiditate vitae ratione consequuntur obcaecati quae esse non facere veritatis temporibus adipisci accusantium, inventore illum sequi. Illum pariatur beatae obcaecati.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nihil cupiditate vitae ratione consequuntur obcaecati quae esse non facere veritatis temporibus adipisci accusantium, inventore illum sequi. Illum pariatur beatae obcaecati.</p>
+                <p>Try to guess the word chosen by the game with the given number of attempts. The number of attempts and the length of word the game chooses depend on the difficulty level you choose.</p>
+                <p> Modes: </p>
+                <ul>
+                    <li>
+                        <Link to={"/game/easy"} >Try Easy mode now</Link> You get <strong>7 attempts</strong> to guess <strong>5 letter</strong> word.
+                    </li>
+                    <li>
+                        <Link to={"/game/medium"} >Are you up for a challenge</Link> <strong>6 attempts</strong> to guess <strong>6 letter</strong> word.
+                    </li>
+                    <li>
+                    <Link to={"/game/hard"} >Insanity</Link> <strong>5 attempts</strong> to guess <strong>7 letter</strong> word.
+                    </li>
+                </ul>
             </div>
-            <div>
-                <Link to={"/game/easy"} >
-                    <button>
-                        EASY
-                    </button>
-                </Link>
-                <Link to={"/game/medium"} >
-                    <button>
-                        MEDIUM
-                    </button>
-                </Link>
-                <Link to={"/game/hard"} >
-                    <button>
-                        HARD
-                    </button>
-                </Link>
-                <Link to={"/rules"} >
-                    <button>
-                        New
-                    </button>
-                </Link>
 
-            </div>
         </div>
     )
 }
