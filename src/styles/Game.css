@@ -11,8 +11,8 @@
 }
 
 #hidden-input-field {
-    background: #fffef0;
-    /* background-color: white; */
+    /* background: #fffef0; */
+    background-color: white;
     border: 0px;
     width: 100%;
 }
@@ -25,12 +25,14 @@
 
 #nav-bar {
     display: flex;
-    padding: 2%;
+    margin-top: 2%;
+    padding: 2% 0;
     justify-content: right;
 }
 
 #nav-bar a {
     margin: 0 5%;
+    text-decoration: none;
 }
 
 #game-header {

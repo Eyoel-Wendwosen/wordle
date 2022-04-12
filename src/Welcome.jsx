@@ -40,6 +40,9 @@ export default function Welcome() {
                     <Link to={"/game/hard"} >Insanity</Link> <strong>5 attempts</strong> to guess <strong>7 letter</strong> word.
                     </li>
                 </ul>
+                <p>
+                    If you don't finish your game in one go, don't worry the game saves your progress. Just click the <Link to={"/game"} >here</Link> to continue or Games button on the navigation bar.
+                </p>
             </div>
 
         </div>

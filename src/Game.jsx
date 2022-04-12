@@ -63,7 +63,6 @@ export default function Game(props) {
     });
   }
 
-
   function setGameDifficulty(wordLength, tries) {
     dispatch({
       type: 'SET_DIFFICULTY',
@@ -98,7 +97,6 @@ export default function Game(props) {
           break;
         }
         default:
-
           break;
       }
     } else {
@@ -126,7 +124,6 @@ export default function Game(props) {
     localStorage.setItem("wordle-data", JSON.stringify(data));
   }, [attempts, currentAttemptIndex, gameStatus, wordLength, selectedWord, tries]);
 
-
   function setHiddenInputFocus() {
     let input = document.querySelector("#hidden-input-field");
     input.focus();
@@ -135,9 +132,11 @@ export default function Game(props) {
   function checkWord(attempt) {
     return Object.keys(selectedWord)[0].toLowerCase() === attempt.toLowerCase();
   }
+
   function isValidWord(attempt) {
     return listOfWords[attempt] !== undefined;
   }
+
   function showNotification(title, message, type, duration = 2000, container = "top-center") {
     Store.addNotification({
       ...notifications,
@@ -151,6 +150,7 @@ export default function Game(props) {
     }
     );
   }
+
   function checkUserSubmission(e) {
     e.preventDefault();
     if (gameStatus === GAME_STATUS.STARTED) {
