@@ -17,3 +17,10 @@ There are three difficulty levels for this game,
 Notification component [React-Notification-Component](https://teodosii.github.io/react-notifications-component/)
 
 State management [Redux](https://github.com/reduxjs/redux)
+
+
+### Installation 
+1. run `git clone https://github.com/Eyoel-Wendwosen/wordle.git` to clone the repository.
+2. cd into the director `cd wordle/`.
+3. run `npm install` to install the node dependencies.
+4. run `npm run dev` to run the program on your local machine. 
